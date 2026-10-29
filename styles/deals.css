@@ -1,0 +1,380 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf5;
+    color: #292929;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e65325;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #333333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e65325;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background: linear-gradient(120deg, #fff0df, #ffe1ca);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #e65325;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: #292929;
+}
+
+.hero h1 span {
+    color: #e65325;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e65325;
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #c83d16;
+    transform: translateY(-2px);
+}
+
+/* Section Headings */
+.daily-special,
+.combos {
+    padding: 65px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #292929;
+}
+
+.section-heading > p:last-child {
+    color: #777777;
+}
+
+/* Daily Special Card */
+.special-card {
+    display: flex;
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+
+.food-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    min-height: 220px;
+}
+
+.special-image {
+    flex: 1;
+    background: linear-gradient(135deg, #ffe2bc, #ffb77e);
+    font-size: 110px;
+}
+
+.special-info {
+    flex: 1.2;
+    padding: 32px;
+}
+
+.badge {
+    display: inline-block;
+    color: #e65325;
+    background-color: #fff0e9;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.special-info h3,
+.combo-info h3 {
+    font-size: 23px;
+    margin: 12px 0 8px;
+}
+
+.special-info > p,
+.description {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+ul li {
+    color: #555555;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+ul li::before {
+    content: "✓";
+    color: #e65325;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.price-row,
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.price {
+    color: #e65325;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Combo Cards */
+.combos {
+    background-color: #fff3e8;
+}
+
+.combo-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.combo-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.combo-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.student-image {
+    background: linear-gradient(135deg, #ffe9b5, #ffc66e);
+}
+
+.lunch-image {
+    background: linear-gradient(135deg, #ffd5bd, #ff9c78);
+}
+
+.family-image {
+    background: linear-gradient(135deg, #fff0b8, #f7d66b);
+}
+
+.combo-info {
+    padding: 24px;
+}
+
+.combo-info h3 {
+    margin-top: 14px;
+}
+
+.combo-info ul {
+    min-height: 100px;
+}
+
+.popular {
+    border: 2px solid #e65325;
+}
+
+.popular-label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e65325;
+    color: #ffffff;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #292929;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer h3 {
+    color: #ff7950;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #dddddd;
+}
+
+.copyright {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #494949;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .header {
+        padding: 18px 5%;
+    }
+
+    .daily-special,
+    .combos {
+        padding: 55px 5%;
+    }
+
+    .combo-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .special-card {
+        flex-direction: column;
+    }
+
+    .special-image {
+        min-height: 190px;
+    }
+
+    .special-info {
+        padding: 24px;
+    }
+
+    .combo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .combo-info ul {
+        min-height: auto;
+    }
+
+    .daily-special,
+    .combos {
+        padding: 45px 6%;
+    }
+}
