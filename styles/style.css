@@ -1,3 +1,32 @@
+ feature/feedback-page
+
+/* =========================================
+   CAMPUS BITES - FEEDBACK & CONTACT PAGE
+   Member 4 - SEST4663
+========================================= */
+
+
+/* Common Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fffdf9;
+    color: #252525;
+    line-height: 1.6;
+}
+
+.container {
+
 feature/menu-page
 /* CAMPUS BITES — premium menu page styles
    Assignment constraints: plain HTML + CSS, one shared stylesheet, responsive media queries.
@@ -233,17 +262,26 @@ feature/menu-page
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
   }
   
-=======
+
 
 /* =========================================
    CAMPUS BITES - HOME PAGE STYLES
 ========================================= */
 
 .cb-container {
+ develop
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
+
+ feature/feedback-page
+
+/* Header & Navigation */
+
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
 
 .cb-section {
     padding: 85px 0;
@@ -252,10 +290,39 @@ feature/menu-page
 .cb-header {
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+ develop
     position: sticky;
     top: 0;
     z-index: 100;
 }
+
+ feature/feedback-page
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #222;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #f47b20;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #444;
+    text-decoration: none;
 
 .cb-navbar {
     min-height: 75px;
@@ -290,16 +357,77 @@ feature/menu-page
 .cb-nav a {
     text-decoration: none;
     color: #475569;
+ develop
     font-size: 14px;
     font-weight: 600;
     transition: 0.3s;
 }
 
+ feature/feedback-page
+.nav-links a:hover,
+.nav-links a.active {
+
 .cb-nav a:hover,
 .cb-nav a.active {
+ develop
     color: #f47b20;
 }
 
+
+ feature/feedback-page
+/* Hero Section */
+
+.feedback-hero {
+    min-height: 430px;
+    background:
+        linear-gradient(110deg,
+        rgba(30, 30, 30, 0.92),
+        rgba(30, 30, 30, 0.65)),
+        url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.hero-tag,
+.section-tag {
+    color: #ff9b4a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+.hero-content h1 span {
+    color: #ff963f;
+}
+
+.hero-content p {
+    max-width: 570px;
+    color: #e2e2e2;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: #f47b20;
+    color: white;
+    text-decoration: none;
+    padding: 14px 27px;
+    border-radius: 7px;
 
 /* HERO SECTION */
 
@@ -358,9 +486,370 @@ feature/menu-page
     border-radius: 8px;
     text-decoration: none;
     font-size: 14px;
+develop
     font-weight: 700;
     transition: 0.3s;
 }
+
+ feature/feedback-page
+.primary-btn:hover {
+    background: #d85e0b;
+    transform: translateY(-3px);
+}
+
+
+/* Section Heading */
+
+.contact-section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: #f47b20;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+/* Contact Cards */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #f0e9e2;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(244,123,32,0.12);
+    border-color: #f47b20;
+}
+
+.contact-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #fff0e3;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+}
+
+.contact-card h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.contact-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* Feedback Section */
+
+.feedback-section {
+    padding: 90px 0;
+    background: #fff4eb;
+}
+
+.feedback-wrapper {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.feedback-info h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin: 20px 0;
+}
+
+.feedback-info > p {
+    color: #707070;
+    margin-bottom: 25px;
+}
+
+.feedback-points {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.feedback-points span {
+    display: inline-grid;
+    place-items: center;
+    background: #f47b20;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info-note {
+    background: white;
+    border-left: 4px solid #f47b20;
+    padding: 20px;
+    margin-top: 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.info-note strong {
+    color: #f47b20;
+}
+
+.info-note p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+
+/* Feedback Form Card */
+
+.feedback-form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+}
+
+.feedback-form-card h2 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* Form Fields */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dedede;
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f47b20;
+    box-shadow: 0 0 0 3px rgba(244,123,32,0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* Rating Options */
+
+.rating-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.rating-options label {
+    cursor: pointer;
+    margin: 0;
+}
+
+.rating-options input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.rating-options span {
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.rating-options input:checked + span {
+    background: #fff0e3;
+    border-color: #f47b20;
+    color: #d85e0b;
+}
+
+.rating-options label:focus-within span {
+    outline: 2px solid #f47b20;
+}
+
+
+/* Checkbox */
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: 17px;
+    height: 17px;
+    accent-color: #f47b20;
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    font-size: 12px;
+    color: #777;
+    font-weight: 500;
+}
+
+
+/* Submit Button */
+
+.submit-btn {
+    width: 100%;
+    background: #f47b20;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #d85e0b;
+    transform: translateY(-2px);
+}
+
+.privacy-note {
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* Footer */
+
+.site-footer {
+    background: #202020;
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 35px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-content p {
+    color: #aaa;
+    max-width: 350px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f47b20;
+}
+
+.copyright {
+    border-top: 1px solid #383838;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.copyright p {
+    color: #999;
 
 .cb-btn-primary {
     background: #f47b20;
@@ -731,10 +1220,109 @@ feature/menu-page
 
 .cb-copyright p {
     color: #94a3b8;
+develop
     font-size: 12px;
 }
 
 
+ feature/feedback-page
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feedback-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .feedback-info h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* Mobile Devices */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .feedback-hero {
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .contact-section,
+    .feedback-section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-form-card {
+        padding: 23px 17px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .rating-options {
+        gap: 7px;
+    }
+
+    .rating-options span {
+        padding: 8px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .copyright {
+=======
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
@@ -845,12 +1433,17 @@ feature/menu-page
     }
 
     .cb-copyright {
+ develop
         flex-direction: column;
         text-align: center;
     }
+
+ feature/feedback-page
+}
 
     .cb-hours div {
         font-size: 11px;
     }
 }
 develop
+ develop
